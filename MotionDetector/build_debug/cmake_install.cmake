@@ -1,4 +1,4 @@
-# Install script for directory: D:/Users/Enzo HD/Github/Repos/er/cpp-OpenCV/MotionDetector
+# Install script for directory: D:/Users/Enzo HD/Github/Repos/Atom/cpp-OpenCV/MotionDetector
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Users/Enzo HD/Github/Repos/er/cpp-OpenCV/MotionDetector/build_debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Users/Enzo HD/Github/Repos/Atom/cpp-OpenCV/MotionDetector/build_debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

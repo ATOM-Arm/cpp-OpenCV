@@ -117,7 +117,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/opt/opencv_mingw/x64/mingw/lib/OpenCVConfig.cmake"
   "C:/opt/opencv_mingw/x64/mingw/lib/OpenCVModules-release.cmake"
   "C:/opt/opencv_mingw/x64/mingw/lib/OpenCVModules.cmake"
-  "D:/Users/Enzo HD/Github/Repos/er/cpp-OpenCV/FirstTrip/CMakeLists.txt"
+  "D:/Users/Enzo HD/Github/Repos/Atom/cpp-OpenCV/FirstTrip/CMakeLists.txt"
   "CMakeFiles/3.29.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeRCCompiler.cmake"

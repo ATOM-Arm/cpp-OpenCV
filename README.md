@@ -4,19 +4,30 @@ This repository contains C++ example code using the OpenCV library for computer 
 
 This guide details the steps to develop computer vision applications in C++ with OpenCV on Windows using the MinGW (GCC) compiler and CMake, managed from VS Code.
 
-## 🚀 Installation and Configuration
+# Documentation
 
-### Prerequisites (Windows)
+OpenCV getting started [guide](https://docs.opencv.org/4.x/d2/de6/tutorial_py_setup_in_windows.html)
+
+OpenCV [official documentation](https://docs.opencv.org/)
+
+OpenCV [C++ tutorials](https://docs.opencv.org/4.x/d9/df8/tutorial_root.html)
+
+OpenCV C++ [API reference](https://docs.opencv.org/4.x/d1/da0/group__core.html)
+
+
+# 🚀 Installation and Configuration
+
+## Prerequisites (Windows)
 
 1. **MinGW (GCC):** Install a MinGW distribution (e.g., TDM-GCC or MinGW-w64) and ensure its `bin` directories are on the system `Path`.
-2. **CMake:** Install CMake and choose the option to add it to the system `Path`.
+2. **CMake:** Download and Install CMake at [this link](https://cmake.org/download) and choose the option to add it to the system `Path`.
 3. **VS Code:** Install VS Code and the extensions: **C/C++** and **CMake Tools**.
 
-### 1. Build and Install OpenCV (MinGW-compatible)
+## 1. Build and Install OpenCV (MinGW-compatible)
 
 To avoid linkage errors, build OpenCV from source using MinGW.
 
-1. **Download the Source:** Download OpenCV source (e.g., 4.x) from the official site and extract to a location (example: `C:\opt\opencv-4.12.0`).
+1. **Download the Source:** Download OpenCV source (e.g., 4.x) from the [official site](https://opencv.org/releases) and extract to a location (example: `C:\opt\opencv-4.12.0`).
 
 2. **Configure and Build (terminal):**
     Use CMake to generate MinGW Makefiles and then build and install:
@@ -36,15 +47,25 @@ To avoid linkage errors, build OpenCV from source using MinGW.
     mingw32-make install
     ```
 
-### 2. Configure PATH for OpenCV DLLs
+## 2. Configure PATH for OpenCV DLLs
 
 Add the OpenCV DLL folder to your system PATH so executables can find runtime libraries:
 
 1. Open Windows Environment Variables.
+
+    Hit Win + R, type `sysdm.cpl`, go to the **Advanced** tab, and click **Environment Variables**.
 2. Edit the user or system `Path`.
 3. Add the DLL installation path (usually under `bin`), for example:
     ```
     C:\opt\opencv_mingw\x64\mingw\bin
+    ```
+    or in PowerShell:
+    ```bash
+    $env:PATH += ";C:\opt\opencv_mingw\x64\mingw\bin"
+    ```
+    to check the environment variable in the current session.
+    ```bash
+    echo $env:Path
     ```
 
 Note: Close and reopen VS Code and terminals after updating PATH.
@@ -136,6 +157,11 @@ setx PATH "$($env:PATH);C:\opt\opencv_mingw\x64\mingw\bin"
 After setting persistent PATH, close and reopen your terminal or IDE.
 
 ### 4. Build the project
+
+Delete the existing build folder if it exists, then run the following commands to
+```bash
+Remove-Item -Recurse -Force build_debug, build_release;
+```
 
 Create debug and release build folders and build with MinGW Makefiles:
 

@@ -6,7 +6,7 @@ const int WINDOW_WIDTH = 800;
 
 int main() {
     std::cout << "/* Starting */" << std::endl;
-    cv::Mat image = cv::imread("D:/Users/Enzo HD/Github/Repos/er/cpp-OpenCV/FirstTrip/blackhole.jpg");
+    cv::Mat image = cv::imread("blackhole.jpg");
     if (image.empty()) {
         std::cerr << "Error: Could not open image file." << std::endl;
         return -1;
